@@ -13,8 +13,8 @@ if where == -1:
 else:
     # Not on PA.
     config = {
-        "host": "C00250093.mysql.pythonanywhere-services.com", # Enter own information in these slots
-        "database": "C00250093$default",
-        "user": "C00250093",
-        "password": "pythonanywheremysqlpassword",
+        "host": "yourname.mysql.pythonanywhere-services.com", # Enter own information in these slots
+        "database": "yourdatabase$default",
+        "user": "yourusername",
+        "password": "yourpassword",
     }
