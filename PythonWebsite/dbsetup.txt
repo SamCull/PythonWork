@@ -1,0 +1,26 @@
+==========================
+Creating comments database
+
+mysql -u root
+create database commentsDB;
+show databases;
+grant all on commentsDB.* to 'comment' identified by 'commentspasswd'
+quit
+
+
+mysql -u comment -p commentsDB
+password: commentspasswd
+
+create table comments (
+--> id int not null auto_increment primary key,
+--> email varchar(64) not null,
+--> message varchar(64) not null),
+--> time timestamp not null default current_timestamp() on update current_timestamp());
+
+show tables;
+describe comments;
+insert into comments (email,message) values ('samcull2000@gmail.com','Sample message');
+insert into comments (email,message) values ('JoeDoe@gmail.com','A second sample message');
+select * from comments;
+
+

@@ -1,0 +1,24 @@
+﻿
+body {
+    
+    background-color: #E9E3E3
+    
+}
+
+h1 {    /* Welcome */
+    text-align:center;
+    font-size: 40px;
+    color:green
+}
+
+h2 {    /* This is homepage*/
+       font-size:35px;
+       text-align:center;
+}
+
+ul {
+    font-size: 30px;
+    
+    color:red
+    
+}
