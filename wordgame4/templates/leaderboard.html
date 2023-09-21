@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block thebody %}
+    
+    {% if position > 0 %}
+        <p>
+        You were placed in position {{position}} out of {{outof}} players.
+        </p>
+    {% endif %}
+
+    {% if leaderboard %}
+        <p>
+        Here's the top ten scores:
+        </p>
+        <table border='1'>
+            <tr>
+                <th>Position</th><th>Time</th><th>Who</th><th>Sourceword</th><th>Matches</th>
+            </tr>
+            {% for time, name, sourceword, guesses in leaderboard[:10] %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{time}}</td>
+                    <td>{{name}}</td>
+                    <td>{{sourceword}}</td>
+                    <td>{{guesses}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        No data.
+    {% endif %} 
+    <p>
+    <a href='/startgame'><button>Play?</button></a>
+    </p>
+    <p>
+    <a href='/rules'><button>Review the rules</button></a>
+    </p>
+    
+    
+
+{% endblock %}
+

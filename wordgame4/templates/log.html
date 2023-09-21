@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block thebody %}
+    {% if data %}
+        {% for line in data %}
+            {% for item in line.split("|") %}
+                {{ item }}<br />
+            {% endfor %}
+            -----------------------------<br />
+        {% endfor %}
+    {% else %}
+        No data.
+    {% endif %}
+{% endblock %}

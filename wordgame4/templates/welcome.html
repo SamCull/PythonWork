@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block thebody %}
+
+    <h2>{{title}}</h2>
+
+    <h4>How to play...</h4>
+        <p>
+        You are provided with a word of eight letters or more which we'll call the "sourceword".</p>
+        <p>You are to think up seven 4-or-more letter words made up from the letters contained within the sourceword, ensuring that:
+        </p>
+        <ol>
+            <li>Each word is only made up from the letters contained within the sourceword.
+            <li>You haven't reused any letter more times that it appears in the sourceword.
+            <li>Each word exists within the dictionary (i.e., it's a “real” word).
+            <li>The words all have four letters or more.
+            <li>There are no duplicate words.
+            <li>None of the seven words is the source word. 
+        </ol>
+        <p>
+        <b>Note</b>: case is NOT significiant (i.e., This, THIS, and this are the *same* word).
+        </p>
+
+    <a href='/startgame'><button>Let's play!</button></a>
+
+{% endblock %}

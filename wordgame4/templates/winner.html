@@ -1,0 +1,14 @@
+{% extends "results.html" %}
+
+{% block theresults %}
+    <h2>{{title}}</h2>
+    <p>
+    Well done, you've won!
+    <p>
+    <form action='/processhighscore' method='post'>
+        Enter your name: <input type='text' required autofocus name='username'>
+        <p>
+        <input type='submit' value='Record score!'>
+        </p>
+    </form>
+{% endblock %}

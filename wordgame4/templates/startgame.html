@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block thebody %}
+
+    <h2>{{title}}</h2>
+
+    <p>The clock is ticking...</p>
+    <p>You word is: <strong>{{sourceword}}</strong>
+    <p>Enter your seven words in this box, separating each word by a space:<p>
+    <form action='/processwords' method='post'>
+        <input type='text' required autofocus size=100 name='seven_words'>
+        <p>
+        <input type='submit' value='Done!'>
+        </p>
+    </form>
+{% endblock %}
